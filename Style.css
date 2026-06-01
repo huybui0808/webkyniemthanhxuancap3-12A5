@@ -129,16 +129,16 @@ hr {
 }
 
 /* PHẦN ALBUM */
-.test {
+.test { 
     margin-bottom: 20px;
-    width: clamp(20px, 20vw, 250px);
+    width: clamp(20px, 20vw, 120px);
 
-    border-radius:  clamp(5px, 3vw, 30px);
+    border-radius:  clamp(5px, 3vw, 15px);
     cursor: pointer;
     transition: all 1s ease;
 }
 
-.anhtesst {
+.anhtesst { 
     align-items: center;
     gap: clamp(10px, 5vw, 40px);
     justify-content: center;
@@ -146,5 +146,5 @@ hr {
     flex-wrap: wrap;
 }
 .khoianhtest {
-    margin-top: clamp(70px, 20vw, 170px);
+    margin-top: clamp(70px, 20vw, 120px);
 }
