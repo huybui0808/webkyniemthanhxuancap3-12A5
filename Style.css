@@ -140,7 +140,7 @@ hr {
 
 .anhtesst { 
     align-items: center;
-    gap: clamp(7px, 4vw, 40px);
+    gap: clamp(7px, 4vw, 20px);
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
