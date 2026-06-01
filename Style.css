@@ -7,20 +7,25 @@ body {
     background-position: center;
     background-size: cover;
 }
-.nen{ background-color: #F3F9FB; }
+/* BỐ CỤC TỶ LỆ MÀN HÌNH VÀ HIỆU ỨNG*/
+
+.nen {
+    background-color: #f3f9fb;
+}
 /* PHẦN NAVBAR */
-.navbar { height: 0 !important;
+.navbar {
+    border: 0 solid;
     margin-top: clamp(10px, 3vw, 30px);
-    margin-right: clamp(5px, 3vw, 30px);margin-left: clamp(5px, 3vw, 50px);
+    margin-right: clamp(5px, 3vw, 30px);
+    margin-left: clamp(5px, 3vw, 50px);
     font-size: clamp(18px, 3vw, 34px);
 }
-.danhsach { 
+.danhsach {
     margin-left: clamp(5px, 6vw, 160px);
     font-size: clamp(12px, 3vw, 24px);
-   
 }
 
-.link { 
+.link {
     background: linear-gradient(to right, #a78bfa, #ec4899);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -49,7 +54,7 @@ h1 {
     font-size: clamp(12px, 3vw, 35px);
     font-weight: 600;
     letter-spacing: 2px;
-    color:white;
+    color: white;
     text-transform: uppercase;
     margin-top: 10px;
 }
@@ -63,18 +68,26 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center; z-index: 999;
+    text-align: center;
+    z-index: 999;
 }
-.loiyeuthuong { display: inline-flex; gap: 15vw ; margin-top: clamp(10px,8vw,80px); color: white; }
-.bamloiyeuthuong{ border:  solid #a78bfa;
-padding: clamp(2px,2vw,20px); 
-border-radius: clamp(10px,8vw,40px); 
-background-color: #a78bfa; 
-display: flex;
-display: inline-block; 
-
+.loiyeuthuong {
+    display: inline-flex;
+    gap: 15vw;
+    margin-top: clamp(10px, 8vw, 80px);
+    color: white;
 }
-.linkloiyeuthuong{ color: white; font-size: clamp(14px, 3vw, 40px);
+.bamloiyeuthuong {
+    border: solid #a78bfa;
+    padding: clamp(2px, 2vw, 20px);
+    border-radius: clamp(10px, 8vw, 40px);
+    background-color: #a78bfa;
+    display: flex;
+    display: inline-block;
+}
+.linkloiyeuthuong {
+    color: white;
+    font-size: clamp(14px, 3vw, 40px);
 }
 
 @keyframes fadeInUp {
@@ -89,8 +102,11 @@ display: inline-block;
 }
 
 /*  CHỮ THƯỚC PHIM KỶ NIỆM */
-hr { background-color: #F3F9FB ;}
-.thuocphimkyniem { margin-top:clamp(80px ,20vw,180px);
+hr {
+    background-color: #f3f9fb;
+}
+.thuocphimkyniem {
+    margin-top: clamp(80px, 20vw, 180px);
     text-align: center;
     font-size: clamp(40px, 7vw, 80px);
     margin-bottom: 50px;
@@ -113,10 +129,11 @@ hr { background-color: #F3F9FB ;}
 }
 
 /* PHẦN ALBUM */
-.test { margin-bottom: 20px;
-    width: clamp(350px, 50vw, 400px);
+.test {
+    margin-bottom: 20px;
+    width: clamp(20px, 20vw, 250px);
 
-    border-radius: 10px;
+    border-radius:  clamp(5px, 3vw, 30px);
     cursor: pointer;
     transition: all 1s ease;
 }
