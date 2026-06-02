@@ -8,11 +8,28 @@ body {
     background-size: cover;
 }
 /* BỐ CỤC TỶ LỆ MÀN HÌNH VÀ HIỆU ỨNG*/
- @media (min-width: 1024px) { 
+ @media (max-width: 420px) { 
+   .anhtesst{  margin-left: 10px ; margin-right: 10px;}
+   .anhtesst .test { 
+    width: 100px ;}
+    .chutieude h1 { font-size: 40px;}
+    .chutieude #duoichutieude { font-size: 11px}
+    .link { font-size: 14px;}
+    .navbar  .danhsach{ margin-left: 12px ;
+ }
+ }
+ 
+ 
+  @media (min-width: 1024px) { 
    .anhtesst{  margin-left: 70px ; margin-right: 70px;}
  .test { 
     width: 175px !important;}
  }
+ 
+ 
+ 
+ 
+ 
 .test:hover {
     transform: scale(1.13);
     transition: transform 0.5s ease;
@@ -22,6 +39,22 @@ body {
 .nen {
     background-color: #f3f9fb;
 }
+.test:hover {
+    transform: scale(1.13);
+    transition: transform 0.5s ease;
+    box-shadow: 0 4px 12px rgba(158, 50, 168, 0.9);
+    cursor: pointer; background: black;}
+
+.nen {
+    background-color: #f3f9fb;
+}
+
+
+
+
+
+
+
 /* PHẦN NAVBAR */
 .navbar {
     border: 0 solid;
@@ -140,7 +173,7 @@ hr {
 
 /* PHẦN ALBUM */
 .test {
-    width: 120px;
+    width: 130px;
     border-radius: clamp(5px, 3vw, 15px);
     cursor: pointer;
     transition: all 1s ease;
