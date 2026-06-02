@@ -8,52 +8,48 @@ body {
     background-size: cover;
 }
 /* BỐ CỤC TỶ LỆ MÀN HÌNH VÀ HIỆU ỨNG*/
- @media (max-width: 420px) { 
-   .anhtesst{  margin-left: 10px ; margin-right: 10px;}
-   .anhtesst .test { 
-    width: 100px ;}
-    .chutieude h1 { font-size: 40px;}
-    .chutieude #duoichutieude { font-size: 11px}
-    .link { font-size: 14px;}
-    .navbar  .danhsach{ margin-left: 12px ;
- }
- }
- 
- 
-  @media (min-width: 1024px) { 
-   .anhtesst{  margin-left: 70px ; margin-right: 70px;}
- .test { 
-    width: 175px !important;}
- }
- 
- 
- 
- 
- 
-.test:hover {
-    transform: scale(1.13);
-    transition: transform 0.5s ease;
-    box-shadow: 0 4px 12px rgba(158, 50, 168, 0.9);
-    cursor: pointer; background: black;}
+@media (max-width: 420px) {
+ .lopphu .noidung { font-size: 10px !important; margin-top: 70px !important;
+   
+  }
+    .anhtesst {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .anhtesst .anhcanhan {
+        width: 100px;
+    }
+    .chutieude h1 {
+        font-size: 40px;
+    }
+    .chutieude #duoichutieude {
+        font-size: 11px;
+    }
+    .link {
+        font-size: 14px;
+    }
+    .navbar .danhsach {
+        margin-left: 12px;
+    }
+}
+
+@media (min-width: 1024px) {
+  .lopphu .noidung { font-size: 17px !important; margin-top: 130px !important;
+   
+  }
+    .anhtesst {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    .anhcanhan {
+        width: 175px !important;
+    }
+}
+/* HẾT PHẦN KÍCH CỠ */
 
 .nen {
     background-color: #f3f9fb;
 }
-.test:hover {
-    transform: scale(1.13);
-    transition: transform 0.5s ease;
-    box-shadow: 0 4px 12px rgba(158, 50, 168, 0.9);
-    cursor: pointer; background: black;}
-
-.nen {
-    background-color: #f3f9fb;
-}
-
-
-
-
-
-
 
 /* PHẦN NAVBAR */
 .navbar {
@@ -172,31 +168,48 @@ hr {
 }
 
 /* PHẦN ALBUM */
-.test {
-    width: 130px;
+.anhtesst {
+   gap: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.anh { display: flex;
     border-radius: clamp(5px, 3vw, 15px);
     cursor: pointer;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
+    position: relative;
 }
-
-.anhtesst {
-    align-items: center;
-    gap: clamp(4px, 4vw, 20px);
-    justify-content: center;
+.anhcanhan {  border-radius: clamp(5px, 3vw, 15px);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    width: 130px;
     display: flex;
-    flex-wrap: wrap;
+    margin: auto;
 }
-.khoianhtest {
-    margin-top: clamp(70px, 20vw, 120px);
+.lopphu {border-radius: clamp(5px, 3vw, 15px);
+    cursor: pointer; 
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: black;
+    display: flex; 
+    text-align: center;
+    opacity: 0;
+    transition: 0.6s;cursor: pointer;
 }
-
-
-
-
-
-
-
-
- 
-           
-
+.lopphu:hover {background: linear-gradient( to bottom, rgba(255, 246, 143, 0.4), rgba(198, 166, 253,0.6));
+    opacity: 1;
+}
+.lopphu .noidung{ width: 100%; color: yellow;
+      font-size: 14px; margin-top: 95px;  z-index: 99;}
+.anh:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.73);
+    cursor: pointer; }
+ .lopphu .noidung  .xemchitiet { color: yellow; ;
