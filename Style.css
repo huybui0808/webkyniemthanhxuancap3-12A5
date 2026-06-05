@@ -37,13 +37,23 @@ body {
   .lopphu .noidung { font-size: 17px !important; margin-top: 130px !important;
    
   }
+  
+ .chutieude h1 {font-size: 80px; 
+
+  }
+    .chutieude #duoichutieude p{font-size: 25px;
+    } 
     .anhtesst {
-        margin-left: 80px;
-        margin-right: 80px;
+        margin-left: 120px;
+        margin-right: 120px;
     }
     .anhcanhan {
-        width: 175px !important;
+        width: 180px !important;
     }
+   #lb-prev{ font-size: 50px;}
+   #lb-next{ font-size: 50px;}
+   .lightbox-prev { left: 30px;  }
+.lightbox-next { right: 30px; }
 }
 /* HẾT PHẦN KÍCH CỠ */
 
@@ -76,7 +86,7 @@ body {
 }
 
 /* CHỮ H1 */
-h1 {
+ h1 {
     text-align: center;
     font-family: "Dancing Script", cursive;
     font-size: clamp(45px, 7vw, 150px);
@@ -117,12 +127,20 @@ h1 {
     color: white;
 }
 .bamloiyeuthuong {
-    border: solid #a78bfa;
+    border: #a78bfa solid ;
     padding: clamp(2px, 2vw, 8px);
     border-radius: clamp(10px, 8vw, 40px);
     background-color: #a78bfa;
     display: flex;
     display: inline-block;
+}
+.bamloiyeuthuong:hover{ background-color: #bfdbfe;color: black; transform: scale(0.9);
+    transition: transform 0.5s ease;
+  
+}
+.bamloiyeuthuong:active{ background-color: #bfdbfe;color: black; transform: scale(0.8);
+    transition: transform 0.5s ease;
+  
 }
 .linkloiyeuthuong {
     color: white;
@@ -141,8 +159,8 @@ h1 {
 }
 
 /*  CHỮ THƯỚC PHIM KỶ NIỆM */
-hr {
-    background-color: #f3f9fb;
+hr { opacity: 0;
+    background-color: red;
 }
 .thuocphimkyniem {
     margin-top: clamp(80px, 20vw, 180px);
@@ -212,4 +230,144 @@ hr {
     transition: transform 0.5s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.73);
     cursor: pointer; }
- .lopphu .noidung  .xemchitiet { color: yellow; ;
+ .lopphu .noidung  .xemchitiet { color: yellow; ;}
+
+
+
+
+    /* test phần album */
+.album { 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+   
+    
+    margin: 0 auto;
+}
+
+.khungchuaalbum { text-align: center; display: flex; flex-wrap: wrap;
+    border-radius: 10px;justify-content: center; align-items: center;
+    object-fit: cover; gap: 10px; 
+}
+
+.album{ display: flex; text-align: center;object-fit: cover;
+ }
+
+/* Bạn tự đặt kích thước cho từng ảnh */
+.anhalbum.doc { border-radius: 10px;object-fit: cover;
+    width: 130px;
+    height: 173.333px;
+}
+
+.anhalbum.ngang {border-radius: 10px;object-fit: cover;
+    width: 260px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+/* PHẦN BẤM XEM ẢNH THÀNH VIÊN */
+.lightbox {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+    pointer-events: none;
+    display: flex;
+}
+.lightbox.active {
+    opacity: 2;
+    pointer-events: all;
+}
+
+.lightbox img {
+    max-height: 85vh;
+    max-width: 90vw;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+#lightbox-img {
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-prev, .lightbox-next { z-index: 9909;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.0);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.lightbox-prev { left: 15px; }
+.lightbox-next { right: 15px; }
+
+
+
+
+
+#lightbox-thumbs {z-index: 999;
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    overflow-x: auto;
+   width: 200vw;
+    padding: 5px;
+}
+
+#lightbox-thumbs img {z-index: 999;
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+    flex-shrink: 0;
+    border: 2px solid transparent;
+}
+
+#lightbox-thumbs img.active {z-index: 999;
+    opacity: 1;
+    border: 2px solid white;
+}
+
+#lightbox-img {z-index: 999;
+    transition: opacity 0.3s ease;
+    width: 90vw;
+    height: 70vh; /* cố định chiều cao */
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+#lightbox-thumbs { z-index: 999;
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    flex-wrap: nowrap;
+    height: 70px;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 5px;
+    box-sizing: border-box;
+}
+  
