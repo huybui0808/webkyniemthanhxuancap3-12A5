@@ -621,12 +621,12 @@ body.no-scroll {
 
 /* PHẦN LƯU BÚT */
 .phanluubut { padding: 20px 15px 60px; }
-.khungluubut { display:flex; flex-wrap:wrap; gap:20px; 
+.khungluubut { display:flex; flex-wrap:wrap; gap:15px; background: linear-gradient(135deg, #fce4ec, #f3e5f5); border-radius: 16px;
     ; justify-content:center; padding:10px; margin: 0 auto ;align-items: flex-start;; }
 
 .sticky-note {
   position:relative; width:180px; min-height:180px;
-  border-radius:4px; padding:36px 16px 50px;
+  border-radius:10px; padding:36px 16px 50px;
   box-shadow: 3px 3px 10px rgba(0,0,0,0.18);
   display:flex; flex-direction:column;
   transition: transform 0.25s, box-shadow 0.25s;
