@@ -196,6 +196,15 @@ window.addEventListener('DOMContentLoaded', function() {
     const fade = document.getElementById('xemthemFade');
     if (card) { card.classList.add('collapsed'); }
     if (fade) { fade.style.display = 'block'; }
+    // Thông báo có người vào trang
+    fetch(`https://api.telegram.org/bot8857796580:AAETscIeHnblH2DEM6lL2Gu-YTLK5JUKXps/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: "6091315052",
+        text: `👀 Có người vào trang web!\n📅 Lúc: ${new Date().toLocaleString("vi-VN")}`
+      })
+    });
 
     renderLuuBut();
 });
