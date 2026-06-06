@@ -368,7 +368,7 @@ async function luuLuuBut() {
     await luuDuLieu(data);
     // Gửi thông báo Telegram
 const tenNguoi = data[0].kyTenImg ? "(chữ ký tay)" : data[0].kyTen;
-fetch(`https://api.telegram.org/bot8857796580:AAETscleHnblH2DEM6lL2Gu-YTLK5JUKXps/sendMessage`, {
+fetch(`https://api.telegram.org/bot8857796580:AAETscIeHnblH2DEM6lL2Gu-YTLK5JUKXps/sendMessage`, {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
