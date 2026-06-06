@@ -633,7 +633,7 @@ body.no-scroll {
 
 .sticky-note {
   position: relative;
-  width: 195px;
+  width: 220px;
   height: 220px; /* cố định chiều cao */
   border-radius: 10px;
   padding: 36px 16px 70px;
