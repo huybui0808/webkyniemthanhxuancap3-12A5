@@ -4,8 +4,6 @@
 
 
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
     let lbAnh = [], lbIndex = 0;
 
@@ -140,4 +138,46 @@ setTimeout(() => popup.classList.add('active'), 10);
 
     });
 });
+
+function toggleAlbum12a5() {
+    const box = document.getElementById('album12a5');
+    const btn = document.getElementById('btnAlbum12a5');
+    const fade = document.getElementById('album12a5Fade');
+    const isCollapsed = box.classList.contains('collapsed');
+    if (isCollapsed) {
+        box.classList.remove('collapsed');
+        btn.textContent = '⬆️ Thu gọn ⬆️';
+        fade.style.display = 'none';
+    } else {
+        box.classList.add('collapsed');
+        btn.textContent = '⬇️ Xem thêm ⬇️';
+        fade.style.display = 'block';
+    }
+}
+
+function toggleCard() {
+    const card = document.getElementById('cardAlbum');
+    const btn = document.getElementById('btnXemThem');
+    const fade = document.getElementById('xemthemFade');
+    const isCollapsed = card.classList.contains('collapsed');
+    if (isCollapsed) {
+        card.classList.remove('collapsed');
+        btn.textContent = '⬆️ Thu gọn';
+        fade.style.display = 'none';
+    } else {
+        card.classList.add('collapsed');
+        btn.textContent = '⬇️ Xem thêm ⬇️';
+        fade.style.display = 'block';
+    }
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+    const card = document.getElementById('cardAlbum');
+    const fade = document.getElementById('xemthemFade');
+    if (card) { card.classList.add('collapsed'); }
+    if (fade) { fade.style.display = 'block'; }
+});
+
+
+
 

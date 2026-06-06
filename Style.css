@@ -9,11 +9,16 @@ body {
 }
 /* BỐ CỤC TỶ LỆ MÀN HÌNH VÀ HIỆU ỨNG*/
 @media (max-width: 420px) {
- .lopphu .noidung { font-size: 10px !important; margin-top: 70px !important;
-   
-  }
-  #lb-next{ opacity: 0;}
-  #lb-prev{ opacity: 0;}
+    .lopphu .noidung {
+        font-size: 10px !important;
+        margin-top: 70px !important;
+    }
+    #lb-next {
+        opacity: 0;
+    }
+    #lb-prev {
+        opacity: 0;
+    }
     .anhtesst {
         margin-left: 10px;
         margin-right: 10px;
@@ -36,88 +41,118 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .lopphu .noidung { font-size: 17px !important; margin-top: 130px !important;
-   
-  }
-    
-.navbar  .danhsach{ margin-left: 50px ;
-}
-.navbar .danhsach:hover{ padding: 2px 20px; border: rgba(0, 0, 0, 0.3) 4px solid ;
- ;}
+    .lopphu .noidung {
+        font-size: 17px !important;
+        margin-top: 130px !important;
+    }
 
- .chutieude h1 {font-size: 80px; 
+    .navbar .danhsach {
+        margin-left: 50px;
+    }
+    .navbar .danhsach:hover {
+        padding: 2px 20px;
+        border: rgba(0, 0, 0, 0.3) 4px solid;
+    }
 
-  }
-    .chutieude #duoichutieude p{font-size: 25px;
-    } 
-    
+    .chutieude h1 {
+        font-size: 80px;
+    }
+    .chutieude #duoichutieude p {
+        font-size: 25px;
+    }
+
+    /* PHẦN XEM THÀNH VIÊN */
+
     .anhcanhan {
         width: 180px !important;
     }
-   #lb-prev{ font-size: 50px; opacity: 2 !important;}
-   #lb-next{ font-size: 50px; opacity: 2 !important;}
-   .lightbox-prev { left: 90px !important;  }
-   .lightbox-next { right: 90px !important; }
+    #lb-prev {
+        font-size: 50px;
+        opacity: 2 !important;
+    }
+    #lb-next {
+        font-size: 50px;
+        opacity: 2 !important;
+    }
+    .lightbox-prev {
+        left: 90px !important;
+    }
+    .lightbox-next {
+        right: 90px !important;
+    }
 
-/* PHẦN XEM THÀNH VIÊN */
+    #lightbox-thumbs {
+        z-index: 999;
+        display: flex;
+        gap: 8px;
+        margin-top: 10px;
+        overflow-x: auto;
+        width: 100%;
+        padding: 5px;
+    }
 
-#lightbox-thumbs {z-index: 999;
-    display: flex;
-    gap: 8px;
-    margin-top: 10px;
-    overflow-x: auto;
-   width: 100%;
-    padding: 5px;
+    #lightbox-thumbs img {
+        z-index: 999;
+        display: none;
+        width: 40px !important;
+        height: 50px !important;
+        object-fit: cover;
+        border-radius: 6px;
+        cursor: pointer;
+        opacity: 0.5;
+        transition: opacity 0.2s ease;
+        flex-shrink: 0;
+        border: 2px solid transparent;
+    }
+
+    #lightbox-thumbs img.active {
+        z-index: 999;
+        opacity: 1;
+        border: 2px solid white;
+    }
+
+    #lightbox-img {
+        z-index: 999;
+        transition: opacity 0.3s ease;
+        height: 100% !important;
+        width: 100% !important;
+        object-fit: contain;
+        border-radius: 30px !important;
+    }
+
+    #lightbox-thumbs {
+        z-index: 999;
+        position: fixed;
+        bottom: 5px !important;
+        left: 0;
+        width: 100%;
+        flex-wrap: nowrap;
+        height: 50px !important;
+        align-items: center;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    .card {
+        background-color: #faf5ff;
+        width: 1300px;
+        margin: 0 auto !important;
+        height: 900px !important;
+        border: 0 !important;
+        overflow-x: hidden; /* cắt ngang */
+        overflow-y: auto; /* scroll dọc */
+    }
+    /*PHẦN ALBUM 12a5 NHÉ*/
+    .album12a5-wrapper #album12a5 {
+        display: none !important;
+    }
+    .album12a5-inner {
+        display: flex !important;
+    }
+
+    /*CHÈN LÊN BÊN TRÊN*/
 }
-
-#lightbox-thumbs img {z-index: 999; display: none;
-    width: 40px !important;
-   height: 50px !important;
-    object-fit: cover;
-    border-radius: 6px;
-    cursor: pointer;
-    opacity: 0.5;
-    transition: opacity 0.2s ease;
-    flex-shrink: 0;
-    border: 2px solid transparent;
-}
-
-#lightbox-thumbs img.active {z-index: 999;
-    opacity: 1;
-    border: 2px solid white;
-}
-
-#lightbox-img {z-index: 999;
-    transition: opacity 0.3s ease;
-    height: 100% !important;
-   width: 100% !important;
-    object-fit: contain;
-  border-radius: 30px !important; 
-}
-
-#lightbox-thumbs { z-index: 999;
-    position: fixed;
-    bottom: 5px !important;
-    left: 0;
-    width: 100%;
-    flex-wrap: nowrap;
-    height: 50px!important;
-    align-items: center;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 5px;
-    box-sizing: border-box;
-}
-.card  { background-color:#faf5ff ;  width: 1300px;  margin: 0 auto!important; 
-  height: 900px !important; border: 0 !important;
-  overflow-x: hidden;   /* cắt ngang */ 
-  overflow-y: auto;     /* scroll dọc */
-}
-.manhinhdt{ display: none;}
-/*CHÈN LÊN BÊN TRÊN*/  
-}
-
-
 /* HẾT PHẦN KÍCH CỠ */
 
 .nen {
@@ -125,20 +160,28 @@ body {
 }
 
 /* PHẦN NAVBAR */
-.navbar { display: flex;
+.navbar {
+    display: flex;
     border: 0 solid;
     margin-top: clamp(10px, 3vw, 30px);
     margin-right: clamp(5px, 3vw, 30px);
     margin-left: clamp(5px, 3vw, 50px);
     font-size: clamp(18px, 3vw, 34px);
 }
-.danhsach { border-radius: 20px; border: 0px solid; padding: 3px 8px;
-border-color: #ec4899;
-   margin-left: 5px; 
+.danhsach {
+    border-radius: 20px;
+    border: 0px solid;
+    padding: 3px 8px;
+    border-color: #ec4899;
+    margin-left: 5px;
     font-size: clamp(12px, 3vw, 24px);
 }
-.danhsach:hover { border-radius: 20px; border: 2px solid; padding: 3px 8px;
-border-color: #ec4899;}
+.danhsach:hover {
+    border-radius: 20px;
+    border: 2px solid;
+    padding: 3px 8px;
+    border-color: #ec4899;
+}
 
 .link {
     background: linear-gradient(to right, #c084fc, #f472b6);
@@ -152,7 +195,7 @@ border-color: #ec4899;}
 }
 
 /* CHỮ H1 */
- h1 {
+h1 {
     text-align: center;
     font-family: "Dancing Script", cursive;
     font-size: clamp(45px, 7vw, 150px);
@@ -186,6 +229,8 @@ border-color: #ec4899;}
     text-align: center;
     z-index: 999;
 }
+
+/* PHẦN NHẬN VÀ GỬI LỜI YÊU THƯƠNG*/
 .loiyeuthuong {
     display: inline-flex;
     gap: 15vw;
@@ -193,24 +238,65 @@ border-color: #ec4899;}
     color: white;
 }
 .bamloiyeuthuong {
-    border: #a78bfa solid ;
+    border: #a78bfa solid;
     padding: clamp(2px, 2vw, 8px);
     border-radius: clamp(10px, 8vw, 40px);
     background-color: #a78bfa;
     display: flex;
     display: inline-block;
 }
-.bamloiyeuthuong:hover{ background-color: #bfdbfe;color: black; transform: scale(0.9);
+.bamloiyeuthuong:hover {
+    background-color: #bfdbfe;
+    color: black;
+    transform: scale(0.9);
     transition: transform 0.5s ease;
-  
 }
-.bamloiyeuthuong:active{ background-color: #bfdbfe;color: black; transform: scale(0.8);
+.bamloiyeuthuong:active {
+    background-color: #bfdbfe;
+    color: black;
+    transform: scale(0.8);
     transition: transform 0.5s ease;
-  
 }
 .linkloiyeuthuong {
     color: white;
     font-size: clamp(14px, 3vw, 25px);
+}
+#popupLoi {
+    width: 400px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    z-index: 99999;
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+    opacity: 0;
+}
+#noiDungLoi {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-family: "Dancing Script", cursive;
+}
+
+#popupLoi.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+.btnDong {
+    background: #a78bfa;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 @keyframes fadeInUp {
@@ -225,10 +311,12 @@ border-color: #ec4899;}
 }
 
 /*  CHỮ THƯỚC PHIM KỶ NIỆM */
-hr { opacity: 0;
+hr {
+    opacity: 0;
     background-color: red;
 }
-.thuocphimkyniem , .Alum12a5 {
+.thuocphimkyniem,
+.Alum12a5 {
     margin-top: clamp(80px, 20vw, 180px);
     text-align: center;
     font-size: clamp(30px, 7vw, 70px);
@@ -251,30 +339,35 @@ hr { opacity: 0;
     border-radius: 5px;
 }
 
-/* PHẦN ALBUM */
-.khoianhtesst{ margin-top: 5px;}
+/* PHẦN THÀNH VIÊN */
+.khoianhtesst {
+    margin-top: 5px;
+}
 .anhtesst {
-   gap: 15px;
+    gap: 15px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
 }
-.anh { display: flex;
+.anh {
+    display: flex;
     border-radius: clamp(5px, 3vw, 15px);
     cursor: pointer;
     transition: all 0.5s ease;
     position: relative;
 }
-.anhcanhan {  border-radius: clamp(5px, 3vw, 15px);
+.anhcanhan {
+    border-radius: clamp(5px, 3vw, 15px);
     cursor: pointer;
     transition: all 0.5s ease;
     width: 130px;
     display: flex;
     margin: auto;
 }
-.lopphu {border-radius: clamp(5px, 3vw, 15px);
-    cursor: pointer; 
+.lopphu {
+    border-radius: clamp(5px, 3vw, 15px);
+    cursor: pointer;
     transition: all 0.5s ease;
     width: 100%;
     height: 100%;
@@ -282,71 +375,45 @@ hr { opacity: 0;
     left: 0;
     position: absolute;
     background: black;
-    display: flex; 
+    display: flex;
     text-align: center;
     opacity: 0;
-    transition: 0.6s;cursor: pointer;
+    transition: 0.6s;
+    cursor: pointer;
 }
-.lopphu:hover {background: linear-gradient( to bottom, rgba(255, 246, 143, 0.4), rgba(198, 166, 253,0.6));
+.lopphu:hover {
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 246, 143, 0.4),
+        rgba(198, 166, 253, 0.6)
+    );
     opacity: 1;
 }
-.lopphu .noidung{ width: 100%; color: yellow;
-      font-size: 14px; margin-top: 95px;  z-index: 99;}
+.lopphu .noidung {
+    width: 100%;
+    color: yellow;
+    font-size: 14px;
+    margin-top: 95px;
+    z-index: 99;
+}
 .anh:hover {
     transform: scale(1.05);
     transition: transform 0.5s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.73);
-    cursor: pointer; }
- .lopphu .noidung  .xemchitiet { color: yellow; ;}
-
-
-
-
-    /* test phần album */
-.album { 
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-   
-    
-    margin: 0 auto;
+    cursor: pointer;
 }
-
-.khungchuaalbum { text-align: center; display: flex; flex-wrap: wrap;
-    border-radius: 10px;justify-content: center; align-items: center;
-    object-fit: cover; gap: 10px; 
+.lopphu .noidung .xemchitiet {
+    color: yellow;
 }
-
-.album{ display: flex; text-align: center;object-fit: cover;
- }
-
-/* Bạn tự đặt kích thước cho từng ảnh */
-.anhalbum.doc { border-radius: 10px;object-fit: cover;
-    width: 130px;
-    height: 173.333px;
-}
-
-.anhalbum.ngang {border-radius: 10px;object-fit: cover;
-    width: 260px;
-    
-}
-
-
-#lb-prev{ opacity: 0;}
-#lb-next{ opacity: 0;}
-
-
-
-
-
-
 
 /* PHẦN BẤM XEM ẢNH THÀNH VIÊN */
 .lightbox {
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
     z-index: 9999;
     justify-content: center;
     align-items: center;
@@ -372,11 +439,13 @@ hr { opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-.lightbox-prev, .lightbox-next { z-index: 9909;
+.lightbox-prev,
+.lightbox-next {
+    z-index: 9909;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255,255,255,0.0);
+    background: rgba(255, 255, 255, 0);
     color: white;
     border: none;
     font-size: 30px;
@@ -384,25 +453,25 @@ hr { opacity: 0;
     border-radius: 50%;
     cursor: pointer;
 }
-.lightbox-prev { left: 15px; }
-.lightbox-next { right: 15px; }
-
-
-
-
-
-#lightbox-thumbs {z-index: 999;
+.lightbox-prev {
+    left: 15px;
+}
+.lightbox-next {
+    right: 15px;
+}
+#lightbox-thumbs {
+    z-index: 999;
     display: flex;
     gap: 8px;
     margin-top: 10px;
     overflow-x: auto;
-   width: 200vw;
+    width: 200vw;
     padding: 5px;
 }
-
-#lightbox-thumbs img {z-index: 999;
+#lightbox-thumbs img {
+    z-index: 999;
     width: 60px;
-   height: 60px;
+    height: 60px;
     object-fit: cover;
     border-radius: 6px;
     cursor: pointer;
@@ -411,21 +480,21 @@ hr { opacity: 0;
     flex-shrink: 0;
     border: 2px solid transparent;
 }
-
-#lightbox-thumbs img.active {z-index: 999;
+#lightbox-thumbs img.active {
+    z-index: 999;
     opacity: 1;
     border: 2px solid white;
 }
-
-#lightbox-img {z-index: 999;
+#lightbox-img {
+    z-index: 999;
     transition: opacity 0.3s ease;
     width: 400px;
     /* cố định chiều cao */
     object-fit: contain;
     border-radius: 20px;
 }
-
-#lightbox-thumbs { z-index: 999;
+#lightbox-thumbs {
+    z-index: 999;
     position: fixed;
     bottom: 20px;
     left: 0;
@@ -438,59 +507,97 @@ hr { opacity: 0;
     padding: 5px;
     box-sizing: border-box;
 }
-.card  { background-color:#faf5ff ;  margin: 25px 25px; 
-  height: 1000px; border: 0 !important;
-  overflow-x: hidden;   /* cắt ngang */ 
-  overflow-y: auto;     /* scroll dọc */
+.card {
+    background-color: #faf5ff;
+    margin: 25px 25px;
+    height: 1000px;
+    border: 0 !important;
+    overflow-x: hidden; /* cắt ngang */
+    overflow-y: auto; /* scroll dọc */
 }
 /* Hiện thanh trượt trên Chrome/Safari */
 .card::-webkit-scrollbar {
-  height: 6px;           /* chiều cao thanh trượt ngang */
-  display: block;
+    height: 6px; /* chiều cao thanh trượt ngang */
+    display: block;
 }
-
 .card::-webkit-scrollbar-track {
-  background: #e2e8f0;   /* màu nền track */
-  border-radius: 10px;
+    background: #e2e8f0; /* màu nền track */
+    border-radius: 10px;
 }
-
 .card::-webkit-scrollbar-thumb {
-  background: #a78bfa;   /* màu thanh kéo - màu tím giống web bạn */
-  border-radius: 10px;
+    background: #a78bfa; /* màu thanh kéo - màu tím giống web bạn */
+    border-radius: 10px;
 }
-
-
-
-
-#popupLoi { width: 400px;
-    display: none;
+body.no-scroll {
+    overflow: hidden;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.5);
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    z-index: 99999;
-    text-align: center;
-    
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    width: 100%;
+}
+#lb-prev {
     opacity: 0;
 }
-#noiDungLoi{ font-size:22px; margin-bottom:20px; font-family: "Dancing Script", cursive; 
-  
+#lb-next {
+    opacity: 0;
 }
 
-#popupLoi.active {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
+/* PHẦN ALBUM 12a5 */
+.album {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin: 0 auto;
 }
-.btnDong {
-    background: #a78bfa;
-    color: white;
-    border: none;
-    padding: 8px 20px;
+
+.khungchuaalbum {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
     border-radius: 10px;
-    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    gap: 10px;
+}
+
+.album {
+    display: flex;
+    text-align: center;
+    object-fit: cover;
+}
+
+.anhalbum.doc {
+    border-radius: 10px;
+    object-fit: cover;
+    width: 130px;
+    height: 173.333px;
+}
+.anhalbum.ngang {
+    border-radius: 10px;
+    object-fit: cover;
+    width: 260px;
+}
+/* NÚT XEM THÊM - ALBUM 12A5 */
+.album12a5-wrapper {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+.album12a5-inner {
+    display: flex !important;
+    justify-content: center;
+    overflow: hidden;
+    transition: height 0.4s ease;
+}
+.album12a5-inner.collapsed {
+    height: 600px;
+}
+#btnAlbum12a5 {
+    border-radius: 20px;
+    margin-top: 10px;
+    border: #a78bfa solid;
+    background: none;
+    padding: 3px 10px;
 }
