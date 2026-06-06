@@ -197,6 +197,7 @@ window.addEventListener('DOMContentLoaded', function() {
     if (card) { card.classList.add('collapsed'); }
     if (fade) { fade.style.display = 'block'; }
     // Thông báo có người vào trang
+    if (!localStorage.getItem("isOwner")) {
     fetch(`https://api.telegram.org/bot8857796580:AAETscIeHnblH2DEM6lL2Gu-YTLK5JUKXps/sendMessage`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -205,7 +206,7 @@ window.addEventListener('DOMContentLoaded', function() {
         text: `👀 Có người vào trang web!\n📅 Lúc: ${new Date().toLocaleString("vi-VN")}`
       })
     });
-
+}
     renderLuuBut();
 });
 
