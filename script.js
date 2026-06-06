@@ -366,6 +366,17 @@ async function luuLuuBut() {
       thoiGian: new Date().toLocaleDateString("vi-VN")
     });
     await luuDuLieu(data);
+    // Gửi thông báo Telegram
+const tenNguoi = data[0].kyTenImg ? "(chữ ký tay)" : data[0].kyTen;
+fetch(`https://api.telegram.org/bot8857796580:AAETscleHnblH2DEM6lL2Gu-YTLK5JUKXps/sendMessage`, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    chat_id: "6091315052",
+    text: `📝 Có lưu bút mới!\n\n✍️ Nội dung: ${data[0].noiDung}\n🖊️ Ký tên: ${tenNguoi}\n📅 Ngày: ${data[0].thoiGian}`,
+    parse_mode: "HTML"
+  })
+});
     cachedData = data;
     dongFormLuuBut();
     renderLuuBut();
