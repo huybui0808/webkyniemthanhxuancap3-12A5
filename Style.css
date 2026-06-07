@@ -150,17 +150,41 @@ body {
     .album12a5-inner {
         display: flex !important;
     }
-.khungluubut { display:flex; flex-wrap:wrap; gap:20px;
-    width: 1200px !important; justify-content:center; padding:10px; margin: 0 auto; }
+    .khungluubut {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 1200px !important;
+        justify-content: center;
+        padding: 10px;
+        margin: 0 auto;
+    }
     #popupLoi {
-    width: 900px !important;}
-    #noiDungLoi { font-size: 34px !important;}
-    .sticky-pin { position:absolute; top:8px; left:50%; transform:translateX(-50%); font-size:22px; }
-.sticky-content { font-size:20px !important;  }
+        width: 900px !important;
+    }
+    #noiDungLoi {
+        font-size: 34px !important;
+    }
+    .sticky-pin {
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 22px;
+    }
+    .sticky-content {
+        font-size: 20px !important;
+    }
 
-.sticky-ky  {  font-size:14px !important; font-weight:700; }
-.sticky-ngay { font-size:14px !important; color:#999; }
-    
+    .sticky-ky {
+        font-size: 14px !important;
+        font-weight: 700;
+    }
+    .sticky-ngay {
+        font-size: 14px !important;
+        color: #999;
+    }
+
     /*CHÈN LÊN BÊN TRÊN*/
 }
 /* HẾT PHẦN KÍCH CỠ */
@@ -179,6 +203,8 @@ body {
     font-size: clamp(18px, 3vw, 34px);
 }
 .danhsach {
+    font-size: clamp(8px, 3vw, 28px);
+    font-weight: 560;
     border-radius: 20px;
     border: 0px solid;
     padding: 3px 8px;
@@ -199,17 +225,13 @@ body {
     -webkit-text-fill-color: transparent;
     text-decoration: none;
 }
-.danhsach {
-    font-size: clamp(8px, 3vw, 28px);
-    font-weight: 560;
-}
 
 /* CHỮ H1 */
 h1 {
     text-align: center;
     font-family: "Dancing Script", cursive;
     font-size: clamp(45px, 7vw, 150px);
-    color: #FF3D9A;
+    color: #ff3d9a;
     text-shadow:
         0 0 10px rgba(255, 61, 154, 0.5),
         0 0 25px rgba(255, 61, 154, 0.8);
@@ -223,7 +245,7 @@ h1 {
     font-weight: 600;
     letter-spacing: 2px;
     color: #fff;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.9);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
     text-transform: uppercase;
     margin-top: 10px;
 }
@@ -322,7 +344,8 @@ h1 {
 }
 
 /*  CHỮ THƯỚC PHIM KỶ NIỆM */
-hr { margin-top:50px ;
+hr {
+    margin-top: 50px;
     opacity: 0;
     background-color: red;
 }
@@ -605,7 +628,8 @@ body.no-scroll {
 .album12a5-inner.collapsed {
     height: 600px;
 }
-#btnAlbum12a5 { margin-bottom: 10px;
+#btnAlbum12a5 {
+    margin-bottom: 10px;
     border-radius: 20px;
     margin-top: 20px;
     border: #a78bfa solid;
@@ -613,132 +637,277 @@ body.no-scroll {
     padding: 3px 10px;
 }
 
-
-
-
-
-
-
-
 /* PHẦN LƯU BÚT */
-.phanluubut { padding: 20px 15px 60px; }
+.phanluubut {
+    padding: 20px 15px 60px;
+}
 .khungluubut {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  background: linear-gradient(135deg, #fce4ec, #f3e5f5);
-  border-radius: 16px;
-  justify-content: center; align-content: center;
-  margin: 0 auto;
-} 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    background: linear-gradient(135deg, #fce4ec, #f3e5f5);
+    border-radius: 16px;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+}
 
 .sticky-note {
-  position: relative;
-  width: 220px;
-  height: 220px; /* cố định chiều cao */
-  border-radius: 10px;
-  padding: 36px 16px 70px;
-  box-shadow: 3px 3px 10px rgba(0,0,0,0.18);
-  display: flex;
-  
-  transition: transform 0.25s, box-shadow 0.25s;
-  animation: popIn 0.4s ease;
-  word-break: break-word;
-  overflow: hidden; /* ẩn phần thừa */
+    position: relative;
+    width: 220px;
+    height: 220px; /* cố định chiều cao */
+    border-radius: 10px;
+    padding: 36px 16px 70px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.18);
+    display: flex;
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+    animation: popIn 0.4s ease;
+    word-break: break-word;
+    overflow: hidden; /* ẩn phần thừa */
 }
-.sticky-note:nth-child(odd)  { transform: rotate(-1.5deg); }
-.sticky-note:nth-child(even) { transform: rotate(1.2deg); }
-.sticky-note:hover { transform: rotate(0deg) scale(1.06) !important; box-shadow:6px 8px 24px rgba(0,0,0,0.22); z-index:10; }
+.sticky-note:nth-child(odd) {
+    transform: rotate(-1.5deg);
+}
+.sticky-note:nth-child(even) {
+    transform: rotate(1.2deg);
+}
+.sticky-note:hover {
+    transform: rotate(0deg) scale(1.06) !important;
+    box-shadow: 6px 8px 24px rgba(0, 0, 0, 0.22);
+    z-index: 10;
+}
 .sticky-note::before {
-  content:""; position:absolute; top:52px; left:14px; right:14px;
-  height:calc(100% - 110px);
-  background-image: repeating-linear-gradient(transparent,transparent 27px,rgba(0,0,0,0.07) 28px);
-  pointer-events:none;
+    content: "";
+    position: absolute;
+    top: 52px;
+    left: 14px;
+    right: 14px;
+    height: calc(100% - 110px);
+    background-image: repeating-linear-gradient(
+        transparent,
+        transparent 27px,
+        rgba(0, 0, 0, 0.07) 28px
+    );
+    pointer-events: none;
 }
-.sticky-pin { position:absolute; top:8px; left:50%; transform:translateX(-50%); font-size:22px; }
+.sticky-pin {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+}
 .sticky-content {
-  font-family: 'Dancing Script', cursive;
-  font-size: 18px;
-  color: #333;
-  line-height: 28px;
-  flex: 1;
-  overflow-y: auto; /* cuộn phần nội dung */
-  margin-top: 4px;
-  scrollbar-width: none; /* ẩn thanh cuộn cho đẹp */
+    font-family: "Dancing Script", cursive;
+    font-size: 18px;
+    color: #333;
+    line-height: 28px;
+    flex: 1;
+    overflow-y: auto; /* cuộn phần nội dung */
+    margin-top: 4px;
+    scrollbar-width: none; /* ẩn thanh cuộn cho đẹp */
 }
-.sticky-footer { position:absolute; bottom:10px; left:14px; right:38px; display:flex; flex-direction:column; }
-.sticky-ky  { font-family:'Dancing Script',cursive; font-size:16px; font-weight:700; color:#7c3aed; }
-.sticky-ngay { font-size:10px; color:#999; }
+.sticky-footer {
+    position: absolute;
+    bottom: 10px;
+    left: 14px;
+    right: 38px;
+    display: flex;
+    flex-direction: column;
+}
+.sticky-ky {
+    font-family: "Dancing Script", cursive;
+    font-size: 16px;
+    font-weight: 700;
+    color: #7c3aed;
+}
+.sticky-ngay {
+    font-size: 10px;
+    color: #999;
+}
 .btn-xoa-note {
-  position:absolute; bottom:8px; right:8px;
-  background:none; border:none; font-size:15px; cursor:pointer;
-  opacity:0; transition:opacity 0.2s; border-radius:6px;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s;
+    border-radius: 6px;
 }
-.sticky-note:hover .btn-xoa-note { opacity:0.6; }
-.btn-xoa-note:hover { opacity:1 !important; background:rgba(220,50,50,0.1); }
+.sticky-note:hover .btn-xoa-note {
+    opacity: 0.6;
+}
+.btn-xoa-note:hover {
+    opacity: 1 !important;
+    background: rgba(220, 50, 50, 0.1);
+}
 
 .btn-guibut {
-  background: linear-gradient(135deg,#a78bfa,#f472b6);
-  color:white; border:none; padding:10px 28px; border-radius:30px;
-  font-size:clamp(14px,3vw,18px); font-weight:700; cursor:pointer;
-  box-shadow:0 4px 15px rgba(167,139,250,0.4);
-  transition:transform 0.2s, box-shadow 0.2s; font-family:'Quicksand',sans-serif;
+    background: linear-gradient(135deg, #a78bfa, #f472b6);
+    color: white;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 30px;
+    font-size: clamp(14px, 3vw, 18px);
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(167, 139, 250, 0.4);
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+    font-family: "Quicksand", sans-serif;
 }
-.btn-guibut:hover { transform:scale(1.05); box-shadow:0 6px 20px rgba(167,139,250,0.6); }
+.btn-guibut:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(167, 139, 250, 0.6);
+}
 .btn-huy {
-  background:#e5e7eb; color:#555; border:none; padding:10px 20px;
-  border-radius:30px; font-size:15px; font-weight:600; cursor:pointer;
-  font-family:'Quicksand',sans-serif; transition:background 0.2s;
+    background: #e5e7eb;
+    color: #555;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "Quicksand", sans-serif;
+    transition: background 0.2s;
 }
-.btn-huy:hover { background:#d1d5db; }
+.btn-huy:hover {
+    background: #d1d5db;
+}
 
 .form-luubut-overlay {
-  position:fixed; top:0; left:0; width:100%; height:100%;
-  background:rgba(0,0,0,0.45); z-index:99999;
-  display:flex; justify-content:center; align-items:center; padding:20px; box-sizing:border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 .form-luubut-box {
-  background:white; border-radius:20px; padding:30px 24px;
-  width:100%; max-width:420px;
-  box-shadow:0 10px 40px rgba(0,0,0,0.25);
-  display:flex; flex-direction:column; gap:12px;
+    background: white;
+    border-radius: 20px;
+    padding: 30px 24px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 .form-luubut-box textarea {
-  width:100%; height:130px; border:2px solid #e9d5ff;
-  border-radius:12px; padding:12px; font-family:'Dancing Script',cursive;
-  font-size:17px; resize:none; outline:none; box-sizing:border-box;
+    width: 100%;
+    height: 130px;
+    border: 2px solid #e9d5ff;
+    border-radius: 12px;
+    padding: 12px;
+    font-family: "Dancing Script", cursive;
+    font-size: 17px;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
 }
-.form-luubut-box textarea:focus { border-color:#a78bfa; }
+.form-luubut-box textarea:focus {
+    border-color: #a78bfa;
+}
 .form-luubut-box input[type="text"],
 .form-luubut-box input[type="password"] {
-  width:100%; border:2px solid #e9d5ff; border-radius:12px;
-  padding:10px 14px; font-size:15px; outline:none; box-sizing:border-box;
+    width: 100%;
+    border: 2px solid #e9d5ff;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
 }
-.form-luubut-box input:focus { border-color:#a78bfa; }
+.form-luubut-box input:focus {
+    border-color: #a78bfa;
+}
 
-.chon-mau { display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:14px; color:#666; }
-.mau-option {
-  width:32px; height:32px; border-radius:50%; cursor:pointer;
-  border:3px solid transparent; box-shadow:0 2px 6px rgba(0,0,0,0.15);
-  font-size:16px; display:flex; align-items:center; justify-content:center;
-  transition:transform 0.2s, border-color 0.2s;
+.chon-mau {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: #666;
 }
-.mau-option:hover { transform:scale(1.15); }
-.mau-option.active-mau { border-color:#7c3aed; transform:scale(1.2); }
+.mau-option {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid transparent;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+        transform 0.2s,
+        border-color 0.2s;
+}
+.mau-option:hover {
+    transform: scale(1.15);
+}
+.mau-option.active-mau {
+    border-color: #7c3aed;
+    transform: scale(1.2);
+}
 
 @keyframes popIn {
-  from { opacity:0; transform:scale(0.7) rotate(-5deg); }
-  to   { opacity:1; }
+    from {
+        opacity: 0;
+        transform: scale(0.7) rotate(-5deg);
+    }
+    to {
+        opacity: 1;
+    }
 }
-@media (max-width:420px) {
-  .sticky-note { width:150px; min-height:150px; padding:32px 12px 46px; }
-  .sticky-content { font-size:14px; line-height:24px; }
+@media (max-width: 420px) {
+    .sticky-note {
+        width: 150px;
+        min-height: 150px;
+        padding: 32px 12px 46px;
+    }
+    .sticky-content {
+        font-size: 14px;
+        line-height: 24px;
+    }
 }
-
-
 
 /* ===== HIỆU ỨNG TIM RƠI ===== */
 @keyframes roiXuong {
-  0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
-  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+/* ===== HIỆU ỨNG CON TRỎ TIM ===== */
+@keyframes timChuot {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -150%) scale(0.3);
+    }
 }
