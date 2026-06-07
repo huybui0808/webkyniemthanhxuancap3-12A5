@@ -24,6 +24,25 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     let lbAnh = [], lbIndex = 0;
 
@@ -216,6 +235,23 @@ const BIN_ID = "6a2402c8f5f4af5e29c210b3";
 const API_KEY = "$2a$10$nQb8E2FsCr2IFBogT76xee7Obj2dzRiVQKxV9NEB4Qt6GDYxMfeve";
 const API_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
 
+// Cloudinary config
+const CLOUD_NAME = "dbmutd7dy";
+const UPLOAD_PRESET = "shhs08e5";
+
+async function uploadAnhCloudinary(dataUrl) {
+  const blob = await (await fetch(dataUrl)).blob();
+  const formData = new FormData();
+  formData.append("file", blob);
+  formData.append("upload_preset", UPLOAD_PRESET);
+  const res = await fetch(`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`, {
+    method: "POST",
+    body: formData
+  });
+  const data = await res.json();
+  return data.secure_url;
+}
+
 let mauDaChon = "#fff9c4";
 let idDangXoa = null;
 let cachedData = [];
@@ -363,13 +399,15 @@ async function luuLuuBut() {
   if (!noiDung) { alert("Bạn chưa viết nội dung!"); return; }
   if (!kyTenCoNoidung()) { alert("Bạn chưa ký tên!"); return; }
 
-  const kyTenImg = layAnhChuKy();
+  const kyTenImgRaw = layAnhChuKy();
 
   const btnGui = document.querySelector("#formLuuBut .btn-guibut");
   btnGui.textContent = "⏳ Đang gửi...";
   btnGui.disabled = true;
 
   try {
+    // Upload ảnh lên Cloudinary, lưu link vào JSONBin
+    const kyTenImg = await uploadAnhCloudinary(kyTenImgRaw);
     const data = await layDuLieu();
     data.unshift({
       id: Date.now(), noiDung, kyTenImg, mau: mauDaChon,
@@ -390,6 +428,7 @@ fetch(`https://api.telegram.org/bot8857796580:AAETscIeHnblH2DEM6lL2Gu-YTLK5JUKXp
     cachedData = data;
     dongFormLuuBut();
     renderLuuBut();
+    hieUngTim();
   } catch(e) {
     alert("Lỗi kết nối, thử lại nhé!");
   } finally {
@@ -474,4 +513,29 @@ function bopOwner() {
   }
 }
 
+
+
+// ===== HIỆU ỨNG TIM RƠI =====
+function hieUngTim() {
+  const emojis = ["💖 Mãi mãi 1 tình bạn ♥️", "🧡", "💛", "☘️ chúc bạn hạnh phúc ☘️", "💙", "💜","💝", 
+  "🩷", "🤍", "♥️","🥳","💯","🔥 Cháy lên tuổi 18"];
+  for (let i = 0; i < 60; i++) {
+    setTimeout(() => {
+      const tim = document.createElement("div");
+     const item = emojis[Math.floor(Math.random() * emojis.length)];
+      tim.textContent = item;
+      tim.style.cssText = `
+        position: fixed;
+        top: -40px;
+        left: ${(i % 10) * 10 + Math.random() * 8}vw;
+        font-size: ${item.length > 2 ? Math.random() * 8 + 10 : Math.random() * 20 + 16}px;
+        z-index: 999999;
+        pointer-events: none;
+        animation: roiXuong ${Math.random() * 4 + 4}s linear forwards;
+      `;
+      document.body.appendChild(tim);
+      setTimeout(() => tim.remove(), 8000);
+    }, i * 90);
+  }
+}
 

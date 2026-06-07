@@ -734,3 +734,11 @@ body.no-scroll {
   .sticky-note { width:150px; min-height:150px; padding:32px 12px 46px; }
   .sticky-content { font-size:14px; line-height:24px; }
 }
+
+
+
+/* ===== HIỆU ỨNG TIM RƠI ===== */
+@keyframes roiXuong {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
