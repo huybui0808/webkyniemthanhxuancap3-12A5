@@ -165,7 +165,7 @@ body {
     }
     .card {
         background-color: #faf5ff;
-        width: 1300px;
+        max-width: 1300px;
         margin: 0 auto !important;
         height: 900px !important;
         border: 0 !important;
